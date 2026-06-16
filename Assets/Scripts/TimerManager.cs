@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class TimerManager : MonoBehaviour
 {
@@ -7,11 +8,12 @@ public class TimerManager : MonoBehaviour
 
     bool timerActive = true;
 
-    public Text timerText;
+    public TMP_Text timerText;
 
-    void Uptade()
+    void Update()
     {
-        if (!timerActive) return;
+        if (timerActive == false) 
+            return;
 
         timeLeft -= Time.deltaTime;
         int time = Mathf.CeilToInt(timeLeft);
