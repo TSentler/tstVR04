@@ -75,6 +75,8 @@ public class PotionSystem : MonoBehaviour
     public GameObject mushroom; 
     public GameObject watermelon;
     public GameObject wind;
+    public GameObject win;
+    public GameObject winW;
 
     public void BrewPotion()
     {
@@ -117,7 +119,7 @@ public class PotionSystem : MonoBehaviour
             ingredients.Count == 2)
         {
             Debug.Log("happy potion worked!");
-
+            Spawner.Spawn(win);
             SetRandomRecipe();
             gameManager.AddScore();
         }
@@ -128,7 +130,7 @@ public class PotionSystem : MonoBehaviour
             ingredients.Count == 3)
         {
             Debug.Log("sad potion worked!");
-
+            Spawner.Spawn(winW);
             SetRandomRecipe();
             gameManager.AddScore();
         }

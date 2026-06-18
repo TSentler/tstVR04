@@ -10,7 +10,7 @@ public class InteractionButton : MonoBehaviour
             FindAnyObjectByType<PotionSystem>().BrewPotion();
         }
 
-        if(collision.gameObject.tag == "RestartButton")
+        if(collision.gameObject.tag == "ResetButton")
         {
             print("есть контакт");
             FindAnyObjectByType<GameManager>().RestartGame();
