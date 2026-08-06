@@ -23,7 +23,7 @@ public class PotionSystem : MonoBehaviour
     {
         currentRecipe.Clear();
 
-        recipeIndex = Random.Range(0,4);
+        recipeIndex = Random.Range(0,5);
        
         if (recipeIndex == 0)
         {
